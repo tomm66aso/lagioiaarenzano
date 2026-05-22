@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Il Menù — La Gioia Pizzeria & Kebab | Arenzano</title>
+  <meta name="description" content="Pizze classiche, bufala, kebab, focacce, insalate e piatti stagionali. Scopri il menù completo di La Gioia pizzeria kebab ad Arenzano.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍕</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="site-nav" id="site-nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="https://lirp.cdn-website.com/c6b04a45/dms3rep/multi/opt/logo-pizzeria-kebab-la-gioia-875ee203-1920w.png" alt="La Gioia" onerror="this.style.display='none'">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="la-pizzeria.html">La Pizzeria</a></li>
+        <li><a href="il-menu.html" class="active">Il Menù</a></li>
+        <li><a href="il-locale.html">Il Locale</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="tel:+390104556699" class="nav-phone">📞 +39 010 4556699</a>
+        <a href="https://wa.me/393333323663" class="nav-wa" title="WhatsApp">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+        <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu">
+    <button class="mobile-close">✕</button>
+    <a href="index.html">Home</a>
+    <a href="la-pizzeria.html">La Pizzeria</a>
+    <a href="il-menu.html">Il Menù</a>
+    <a href="il-locale.html">Il Locale</a>
+    <a href="contatti.html">Contatti</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Ogni giorno fresco</span>
+      <h1>Il <em style="font-style:italic;color:var(--gold-br)">Menù</em></h1>
+      <div class="divider" style="margin-top:20px;"></div>
+      <p style="max-width:560px;margin-top:16px;font-size:1.05rem;">Più di 40 pizze, kebab, focacce, insalate e piatti stagionali. Tutto preparato al momento con ingredienti freschi selezionati.</p>
+      <a href="https://irp.cdn-website.com/c6b04a45/files/uploaded/Menu-la-gioia-pizzeria-e-kebab.pdf" target="_blank" class="btn btn-outline" style="margin-top:24px;">📄 Scarica il menù PDF</a>
+    </div>
+  </section>
+
+  <!-- MENU SECTION -->
+  <section class="section">
+    <div class="container">
+      <div id="menu-loading" class="spinner"></div>
+      <div id="menu-root" style="display:none;">
+        <div class="menu-tabs" id="menu-tabs"></div>
+        <div id="menu-categories"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-sm" style="border-top:1px solid var(--border);">
+    <div class="container reveal">
+      <div class="cta-banner">
+        <span class="eyebrow">Ordina adesso</span>
+        <h2>Porta La Gioia a casa tua</h2>
+        <p>Chiama, scrivi su WhatsApp o ordina su Just Eat. Siamo aperti tutti i giorni dalle 12:00 alle 23:30.</p>
+        <div class="cta-btns">
+          <a href="tel:+390104556699" class="btn btn-gold">📞 Chiama ora</a>
+          <a href="https://wa.me/393333323663" class="btn btn-outline">💬 WhatsApp</a>
+          <a href="https://www.justeat.it/restaurants-la-gioia---pizzeria-kebab-arenzano/menu" target="_blank" class="btn btn-outline">🛵 Just Eat</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-logo">
+          <img src="https://lirp.cdn-website.com/c6b04a45/dms3rep/multi/opt/logo-pizzeria-kebab-la-gioia-875ee203-1920w.png" alt="La Gioia" onerror="this.style.display='none'" style="height:50px;margin-bottom:16px;">
+          <p>Pizzeria & Kebab di qualità<br>ad Arenzano, Liguria.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Naviga</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="la-pizzeria.html">La Pizzeria</a></li>
+            <li><a href="il-menu.html">Il Menù</a></li>
+            <li><a href="il-locale.html">Il Locale</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Orari</h5>
+          <p data-setting="hours">Lun – Dom  12:00 – 23:30</p>
+        </div>
+        <div class="footer-col">
+          <h5>Contatti</h5>
+          <p>
+            <a href="tel:+390104556699" data-setting="phone_main">+39 010 4556699</a><br>
+            <a href="https://wa.me/393333323663" data-setting="phone_whatsapp">+39 333 332 3663</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 La Gioia Pizzeria & Kebab · Arenzano (GE)</p>
+        <p><a href="admin/index.html" style="color:var(--muted);font-size:0.78rem;">Accesso CMS</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+  // ── Default menu data (fallback se Supabase non configurato) ──
+  const DEFAULT_MENU = [
+    {
+      id: 'c1', name: 'Le Pizze', sort_order: 1,
+      items: [
+        { id: 'p1', name: 'Marinara', description: 'pomodoro, aglio, olio, origano', price: 5.50, available: true },
+        { id: 'p2', name: 'Margherita', description: 'pomodoro, mozzarella fiordilatte, basilico', price: 6.50, available: true },
+        { id: 'p3', name: 'Pugliese', description: 'pomodoro, mozzarella fiordilatte, cipolla di Tropea', price: 7.50, available: true },
+        { id: 'p4', name: 'Funghi', description: 'pomodoro, mozzarella fiordilatte, funghi champignon', price: 7.50, available: true },
+        { id: 'p5', name: 'Carciofi', description: 'pomodoro, mozzarella fiordilatte, carciofi', price: 7.50, available: true },
+        { id: 'p6', name: 'Prosciutto e Funghi', description: 'pomodoro, mozzarella fiordilatte, prosciutto cotto, funghi champignon', price: 8.50, available: true },
+        { id: 'p7', name: 'Napoli', description: 'pomodoro, mozzarella fiordilatte, acciughe, origano', price: 7.50, available: true },
+        { id: 'p8', name: 'Siciliana', description: 'pomodoro, mozzarella fiordilatte, acciughe, capperi, olive, origano', price: 8.50, available: true },
+        { id: 'p9', name: 'Salsiccia', description: 'pomodoro, mozzarella fiordilatte, salsiccia', price: 7.50, available: true },
+        { id: 'p10', name: 'Prosciutto Cotto', description: 'pomodoro, mozzarella fiordilatte, prosciutto cotto', price: 8.00, available: true },
+        { id: 'p11', name: 'Diavola', description: 'pomodoro, mozzarella fiordilatte, salame piccante', price: 8.00, available: true },
+        { id: 'p12', name: 'Crudo', description: 'pomodoro, mozzarella fiordilatte, prosciutto crudo di Parma', price: 8.50, available: true },
+        { id: 'p13', name: 'Speck', description: 'pomodoro, mozzarella fiordilatte, speck', price: 8.50, available: true },
+        { id: 'p14', name: 'Speck e Brie', description: 'pomodoro, mozzarella fiordilatte, speck, brie', price: 9.50, available: true },
+        { id: 'p15', name: 'Regina', description: 'pomodoro, stracchino, prosciutto crudo', price: 10.00, available: true },
+        { id: 'p16', name: 'Wurstel', description: 'pomodoro, mozzarella fiordilatte, würstel', price: 7.50, available: true },
+        { id: 'p17', name: 'Americana', description: 'pomodoro, mozzarella fiordilatte, würstel, patatine fritte', price: 8.50, available: true },
+        { id: 'p18', name: 'Patatina', description: 'pomodoro, mozzarella fiordilatte, patatine fritte', price: 7.50, available: true },
+        { id: 'p19', name: 'Tonno e Cipolla di Tropea', description: 'pomodoro, mozzarella fiordilatte, tonno, cipolla di Tropea', price: 8.50, available: true },
+        { id: 'p20', name: 'Biancaneve', description: 'mozzarella fiordilatte, stracchino', price: 7.50, available: true },
+        { id: 'p21', name: 'Stracchino Rossa', description: 'pomodoro, stracchino', price: 8.00, available: true },
+        { id: 'p22', name: 'Gorgonzola Rossa', description: 'pomodoro, mozzarella fiordilatte, Gorgonzola', price: 8.00, available: true },
+        { id: 'p23', name: 'Gorgonzola Bianca', description: 'mozzarella fiordilatte, Gorgonzola', price: 8.00, available: true },
+        { id: 'p24', name: 'Quattro Formaggi Rossa', description: 'pomodoro, mozzarella fiordilatte, stracchino, gorgonzola, scamorza affumicata', price: 10.00, available: true },
+        { id: 'p25', name: 'Quattro Formaggi Bianca', description: 'mozzarella fiordilatte, stracchino, gorgonzola, scamorza affumicata', price: 10.00, available: true },
+        { id: 'p26', name: 'Quattro Stagioni', description: 'pomodoro, mozzarella fiordilatte, carciofi, funghi champignon, olive, prosciutto cotto', price: 9.00, available: true },
+        { id: 'p27', name: 'Capricciosa', description: 'pomodoro, mozzarella fiordilatte, funghi champignon, carciofini, prosciutto cotto, olive, capperi', price: 10.00, available: true },
+        { id: 'p28', name: 'Vegetariana', description: 'pomodoro, mozzarella fiordilatte, melanzane, peperoni, zucchine', price: 8.50, available: true },
+        { id: 'p29', name: 'Verdurissima', description: 'pomodoro, mozzarella fiordilatte, funghi champignon, melanzane, peperoni, cipolla di Tropea, zucchine', price: 10.00, available: true },
+        { id: 'p30', name: 'Calzone', description: 'pomodoro, mozzarella fiordilatte, funghi champignon, prosciutto cotto', price: 8.00, available: true },
+        { id: 'p31', name: 'Calzone Farcito', description: 'pomodoro, mozzarella fiordilatte, funghi champignon, carciofi, olive, prosciutto cotto', price: 9.00, available: true },
+        { id: 'p32', name: 'Rustica', description: 'pomodoro, mozzarella fiordilatte, gorgonzola, salame piccante', price: 9.00, available: true },
+        { id: 'p33', name: 'Calabrese', description: 'pomodoro, mozzarella fiordilatte, salsiccia, cipolla di Tropea, salame piccante', price: 10.00, available: true },
+        { id: 'p34', name: 'Parmigiana', description: 'pomodoro, mozzarella fiordilatte, melanzane, Grana Padano', price: 8.50, available: true },
+        { id: 'p35', name: 'Saporita', description: 'pomodoro, mozzarella fiordilatte, gorgonzola, cipolla di Tropea, salsiccia', price: 10.00, available: true },
+        { id: 'p36', name: 'Fantasia', description: 'pomodoro, stracchino, scamorza affumicata, salame piccante, Grana Padano', price: 10.00, available: true },
+      ]
+    },
+    {
+      id: 'c2', name: 'Pizze con la Bufala', sort_order: 2,
+      items: [
+        { id: 'b1', name: 'Bufala', description: 'pomodoro, bufala, basilico', price: 8.00, available: true },
+        { id: 'b2', name: 'Sorrentina', description: 'pomodoro, bufala, pomodorini, basilico a fine cottura', price: 9.00, available: true },
+        { id: 'b3', name: 'Fresca', description: 'pomodoro e a fine cottura: bufala, rucola e pomodorini', price: 10.00, available: true },
+        { id: 'b4', name: 'Gustosa', description: 'pomodoro, bufala, scamorza affumicata, pomodorini, melanzane, origano', price: 10.00, available: true },
+        { id: 'b5', name: 'Bufala con Cotto', description: 'pomodoro, bufala e a fine cottura prosciutto cotto', price: 10.00, available: true },
+        { id: 'b6', name: 'Bufala con Crudo', description: 'pomodoro, bufala e a fine cottura crudo di Parma', price: 10.00, available: true },
+      ]
+    },
+    {
+      id: 'c3', name: 'Pizze Speciali', sort_order: 3,
+      items: [
+        { id: 's1', name: 'Pesto', description: 'pesto, stracchino, mozzarella fiordilatte, Grana Padano', price: 10.00, available: true },
+        { id: 's2', name: 'Tricolore', description: 'pomodoro, pesto, stracchino', price: 10.00, available: true },
+        { id: 's3', name: 'Pero', description: 'mozzarella fiordilatte, gorgonzola, pere, noci', price: 10.00, available: true },
+        { id: 's4', name: 'Trevigiana', description: 'salsa di noci, stracchino, gorgonzola, trevigiana', price: 11.00, available: true },
+        { id: 's5', name: 'Alto Adige', description: 'salsa di noci, mozzarella fiordilatte, brie, trevigiana, speck', price: 11.00, available: true },
+        { id: 's6', name: 'Fiordibosco', description: 'crema di tartufo, mozzarella fiordilatte, funghi, brie, rucola, grana', price: 11.00, available: true },
+        { id: 's7', name: 'Imperiale', description: 'crema di tartufo, mozzarella fiordilatte, brie, speck, grana', price: 11.00, available: true },
+        { id: 's8', name: 'Pizza Kebab', description: 'pomodoro, mozzarella fiordilatte, insalata, cipolla di Tropea, patatine, carne di kebab, salse', price: 11.00, available: true },
+        { id: 's9', name: 'Boscaiola', description: 'pomodoro, mozzarella fiordilatte, salsiccia, funghi, olive, cipolla di Tropea, origano', price: 11.00, available: true },
+        { id: 's10', name: 'Bresaola, Rucola e Grana', description: 'pomodoro, mozzarella fiordilatte, bresaola, rucola, formaggio Grana', price: 11.00, available: true },
+      ]
+    },
+    {
+      id: 'c4', name: 'Focacce', sort_order: 4,
+      items: [
+        { id: 'f1', name: 'Focaccia col Formaggio', description: 'doppia sfoglia, stracchino', price: 9.00, available: true },
+        { id: 'f2', name: 'Focaccia col Cotto', description: 'doppia sfoglia, stracchino, prosciutto cotto', price: 10.00, available: true },
+        { id: 'f3', name: 'Focaccia Pizzata', description: 'doppia sfoglia, stracchino, pomodoro, origano, acciughe, capperi, olive', price: 11.00, available: true },
+        { id: 'f4', name: 'Focaccia di Recco', description: '', price: 9.00, available: true },
+      ]
+    },
+    {
+      id: 'c5', name: 'Stagionali (dic–apr)', sort_order: 5,
+      items: [
+        { id: 'st1', name: 'Carciofi Freschi', description: 'pomodoro, mozzarella fiordilatte, carciofi freschi', price: 9.00, available: true },
+        { id: 'st2', name: 'Carcioficcia', description: 'pomodoro, mozzarella fiordilatte, carciofi freschi, salsiccia', price: 10.00, available: true },
+        { id: 'st3', name: 'Carciopadano', description: 'pomodoro, mozzarella fiordilatte, carciofi freschi, Grana Padano', price: 10.00, available: true },
+        { id: 'st4', name: 'Carciocotto', description: 'pomodoro, mozzarella fiordilatte, carciofi freschi, prosciutto cotto', price: 10.00, available: true },
+        { id: 'st5', name: 'Squisita', description: 'mozzarella fiordilatte, stracchino, carciofi freschi, pomodorini', price: 10.00, available: true },
+      ]
+    },
+    {
+      id: 'c6', name: 'Kebab', sort_order: 6,
+      items: [
+        { id: 'k1', name: 'Kebab in Piadina', description: 'carne di kebab, insalata, pomodoro, cipolla di Tropea, patatine, salse a scelta (piccante, maionese, ketchup, yogurt)', price: 6.00, available: true },
+        { id: 'k2', name: 'Kebab in Panino', description: 'carne di kebab, insalata, pomodoro, cipolla di Tropea, patatine, salse a scelta', price: 7.00, available: true },
+        { id: 'k3', name: 'Patatine Fritte (medie)', description: '', price: 3.00, available: true },
+        { id: 'k4', name: 'Patatine Fritte (grandi)', description: '', price: 4.00, available: true },
+      ]
+    },
+    {
+      id: 'c7', name: 'I Nostri Piatti', sort_order: 7,
+      items: [
+        { id: 'pi1', name: 'Insalata Greca', description: 'insalata mista, cipolla rossa, olive, feta, pomodorini', price: 10.00, available: true },
+        { id: 'pi2', name: 'Insalatona', description: 'insalata mista, pomodorini, cipolla rossa, olive, mais, tonno, Grana Padano', price: 10.00, available: true },
+        { id: 'pi3', name: 'Insalata Caprese', description: 'pomodoro, mozzarella fiordilatte, basilico', price: 9.00, available: true },
+        { id: 'pi4', name: 'Bresaola, Rucola e Grana', description: 'bresaola punta d\'anca, rucola e Grana Padano', price: 10.00, available: true },
+        { id: 'pi5', name: 'Prosciutto e Bufala', description: 'prosciutto crudo di Parma e mozzarella di bufala', price: 10.00, available: true },
+        { id: 'pi6', name: 'Prosciutto e Melone', description: 'prosciutto crudo di Parma e melone (in stagione)', price: 10.00, available: true },
+        { id: 'pi7', name: 'Piatto di Kebab', description: 'insalata, pomodoro, cipolla di Tropea, patatine fritte, carne di kebab, salse a scelta', price: 10.00, available: true },
+      ]
+    },
+  ];
+
+  // ── Render menu ──
+  async function renderMenu() {
+    let categories = null;
+
+    // Try Supabase first
+    try {
+      if (typeof SUPABASE_URL !== 'undefined' && !SUPABASE_URL.includes('TUOPROJECT')) {
+        const [catRes, itemRes] = await Promise.all([
+          fetch(`${SUPABASE_URL}/rest/v1/menu_categories?select=*&order=sort_order`, {
+            headers: { apikey: SUPABASE_KEY, Authorization: `Bearer ${SUPABASE_KEY}` }
+          }),
+          fetch(`${SUPABASE_URL}/rest/v1/menu_items?select=*&order=sort_order`, {
+            headers: { apikey: SUPABASE_KEY, Authorization: `Bearer ${SUPABASE_KEY}` }
+          }),
+        ]);
+
+        if (catRes.ok && itemRes.ok) {
+          const cats = await catRes.json();
+          const items = await itemRes.json();
+          if (cats.length > 0) {
+            categories = cats.map(cat => ({
+              ...cat,
+              items: items.filter(i => i.category_id === cat.id)
+            }));
+          }
+        }
+      }
+    } catch (_) {}
+
+    if (!categories) categories = DEFAULT_MENU;
+
+    const tabsEl = document.getElementById('menu-tabs');
+    const catsEl = document.getElementById('menu-categories');
+
+    categories.forEach((cat, idx) => {
+      // Tab
+      const btn = document.createElement('button');
+      btn.className = 'menu-tab' + (idx === 0 ? ' active' : '');
+      btn.textContent = cat.name;
+      btn.dataset.cat = cat.id;
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.menu-category').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById('cat-' + cat.id)?.classList.add('active');
+      });
+      tabsEl.appendChild(btn);
+
+      // Category content
+      const section = document.createElement('div');
+      section.className = 'menu-category' + (idx === 0 ? ' active' : '');
+      section.id = 'cat-' + cat.id;
+
+      const grid = document.createElement('div');
+      grid.className = 'menu-grid';
+
+      const availableItems = cat.items.filter(i => i.available !== false);
+      const unavailableItems = cat.items.filter(i => i.available === false);
+      const allItems = [...availableItems, ...unavailableItems];
+
+      if (allItems.length === 0) {
+        grid.innerHTML = '<p style="color:var(--muted);padding:24px 0;">Nessun prodotto in questa categoria.</p>';
+      } else {
+        allItems.forEach(item => {
+          const card = document.createElement('div');
+          card.className = 'menu-item' + (item.available === false ? ' menu-item-unavailable' : '');
+          const price = item.price ? `€${Number(item.price).toFixed(2).replace('.', ',')}` : '';
+          card.innerHTML = `
+            <div class="menu-item-header">
+              <span class="menu-item-name">${item.name}</span>
+              ${price ? `<span class="menu-item-price">${price}</span>` : ''}
+            </div>
+            ${item.description ? `<p class="menu-item-desc">${item.description}</p>` : ''}
+          `;
+          grid.appendChild(card);
+        });
+      }
+
+      section.appendChild(grid);
+      catsEl.appendChild(section);
+    });
+
+    document.getElementById('menu-loading').style.display = 'none';
+    document.getElementById('menu-root').style.display = 'block';
+  }
+
+  renderMenu();
+  </script>
+</body>
+</html>
